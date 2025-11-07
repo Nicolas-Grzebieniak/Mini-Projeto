@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="formulario.js" defer></script>
+    <title>Formulário de Cadasro</title>
+</head>
+<body>
+
+    <main>
+
+        <section>
+
+            <form id="form" action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Cadastro do Usuário</legend>
+
+                    <div class="input-div">
+
+                        <label for="nome">Nome</label>
+
+                        <div class="input-informacoes">
+
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-div">
+
+                        <label for="email">E-mail</label>
+
+                        <div class="input-informacoes">
+
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Digite seu e-mail" id="email" name="email" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-div">
+
+                        <label for="senha">Senha</label>
+
+                        <div class="input-informacoes">
+
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-div">
+
+                        <label for="confirmar_senha">Confirmar Senha</label>
+
+                        <div class="input-informacoes">
+
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Confirme sua senha" id="confirmar_senha" name="confirmar_senha" required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-div">
+
+                        <label for="telefone">Telefone (opcional)</label>
+
+                        <div class="input-informacoes">
+
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" placeholder="Digite seu telefone" id="telefone" name="telefone">
+
+                        </div>
+
+                    </div>
+
+                    <div class="check-div">
+
+                        <label class="check-termos">
+
+                            <input type="checkbox" name="termos_aceitacao" required> 
+                            <span class="check"></span>
+                            <span> Aceito os termos e condições </span>
+
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <div class="botoes">
+
+                    <button id="btn_cadastrar" type="submit">Cadastrar Usuário</button>
+                    <button id="btn_usuarios" type="button">Ver Usuários</button>
+
+                </div>
+
+            </form> 
+
+            <div id="lista_usuarios" class="hidden">
+
+                <h2>Usuários cadastrados</h2>
+                <ul id="usuarios">
+
+                    <!-- Tem que tirar essa parte, é só teste -->
+
+                    <!-- <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                    <li>d</li>
+                    <li>e</li> -->
+
+                </ul>
+                <button id="btn_voltar">Voltar ao cadastro</button>
+
+            </div>
+
+         </section>
+
+    </main>
+    
+    <div class="bolhas">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:29;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:36;"></span>
+        <span style="--i:37;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:40;"></span>
+        <span style="--i:41;"></span>
+        <span style="--i:42;"></span>
+        <span style="--i:43;"></span>
+
+    </div>  
+
+</body>
+</html>
