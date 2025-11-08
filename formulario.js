@@ -36,8 +36,11 @@ function validarEmail() {
 }
 
 function validarSenha() {
-  const padrao = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-  return padrao.test(senha.value);
+
+    const senhaValor = senha.value.trim();
+    const padrao = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    return padrao.test(senhaValor);
+
 }
 
 function validarConfirmarSenha() {
@@ -77,11 +80,42 @@ form.addEventListener('input', () => {
     validarDataNascimento();
 
   btnCadastrar.disabled = !valido;
+
 });
 
+nome.addEventListener('blur', () => {
+
+    if (!validarNome()) {
+        alert('O nome deve ter pelo menos 3 caracteres.');
+    }
+
+});
+
+senha.addEventListener('blur', () => {
+
+    if (!validarSenha()) {
+        alert('A senha deve ter pelo menos 8 caracteres, incluindo letras e números.');
+
+    }
+});
+
+confirmarSenha.addEventListener('blur', () => {
+
+    if (confirmarSenha.value.trim() !== '' && !validarConfirmarSenha()) {
+    alert('As senhas não conferem. Verifique a confirmação.');
+
+  }
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
+    if (!form.checkValidity()) {
+
+        form.reportValidity(); 
+        return;
+        
+    }
 
   const novoUsuario = {
     nome: nome.value.trim(),
@@ -102,8 +136,7 @@ function atualizarLista() {
   usuariosUl.innerHTML = '';
   usuarios.forEach((u) => {
     const li = document.createElement('li');
-    li.textContent = `${u.nome} — ${u.email} — ${u.telefone} — ${u.dataNascimento}`;
+    li.textContent = `${u.nome} — ${u.email}`;
     usuariosUl.appendChild(li);
   });
 }
-

@@ -375,4 +375,18 @@ form, #lista_usuarios {
 
 }
 
+.input-informacoes input[type="date"] {
 
+    width: 100%;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: gray;
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+
+    opacity: 0;
+    cursor: pointer;
+
+}
